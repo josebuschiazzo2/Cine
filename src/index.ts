@@ -27,13 +27,32 @@ let seats:boolean[][]=[
 console.log("La cantidad de asientos desocupados son: " + seatsunoccupied);
 
 // voy a probar haciendo un random
-let numrandom:number[][]=new Array(3);
+
 seatsunoccupied=0;  
+console.log("muestro los valores de la matriz Random");
 for (let x:number=0;x<3;x++) 
   {
     for (let y:number=0;y<3;y++)
     {
-      numrandom[x][y]=((Math.random().toFixed(1)*10)%2);
+      if(((Math.random().toFixed(1)*10)%2)===1)
+      {
+        seats[x][y]=true;
+      } else {
+          seats[x][y]=false;
+         }
+    console.log(seats[x][y]);
+    }
+  }
+for (let x:number=0;x<3;x++) 
+  {
+    for (let y:number=0;y<3;y++)
+    {
+      if (!(seats[x][y])) 
+      {
+        seatsunoccupied++;
+      }
+    }
+  }
       console.log(numrandom[x][y]);
       if (!(seats[x][y])) 
       {
