@@ -53,22 +53,5 @@ for (let x:number=0;x<3;x++)
       }
     }
   }
-      console.log(numrandom[x][y]);
-      if (!(seats[x][y])) 
-      {
-        seatsunoccupied++;
-      }
-    }
-  }
-for (let x:number=0;x<3;x++) 
-  {
-    for (let y:number=0;y<3;y++)
-    {
-      if (!(seats[x][y])) 
-      {
-        seatsunoccupied++;
-      }
-    }
-  }
   
 console.log("La cantidad de asientos desocupados son: " + seatsunoccupied);
